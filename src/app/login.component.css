@@ -1,0 +1,46 @@
+.login_block {
+    border: 1px solid;
+    background-color: gainsboro;
+    position:fixed;
+    width:60%;
+    left:50%;
+    transform: translate(-50%,15%);
+    padding-left:40px;
+    padding-right: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.input_block {
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+input {
+    width: 300px;
+}
+
+h1 {
+    color:white;
+    background-color:green;
+    padding-top:5px;
+    padding-bottom:5px;
+    text-align: center;
+}
+
+h2 {
+    font-size:large;
+}
+
+#login {
+    margin-top:20px;
+    margin-bottom:10px;
+}
+
+#error {
+    color:firebrick;
+}
+
+#success {
+    color:green;
+}

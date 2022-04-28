@@ -1,0 +1,14 @@
+<div class="login_block">
+    <h1>Sign in to your account</h1>
+    <div class="input_block">
+        <h2>Email</h2>
+        <input [(ngModel)]="email"/>
+    </div>
+    <div class="input_block">
+        <h2>Password</h2>
+        <input [(ngModel)]="password"/>
+    </div>
+    <p *ngIf="showError" id="error">Email or password is incorrect</p>
+    <p *ngIf="showSuccess" id="success">Login successful</p>
+    <button type="button" id="login" (click)="tryLogin()">Log in</button>
+</div>
