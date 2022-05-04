@@ -1,1 +1,5 @@
-<app-login></app-login>
+<h1>MP Clothing</h1>
+<div>
+    <app-login *ngIf="pageID==1"></app-login>
+    <app-create-account *ngIf="pageID==2"></app-create-account>
+</div>
