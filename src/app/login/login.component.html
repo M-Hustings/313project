@@ -1,5 +1,6 @@
 <div class="login_block">
     <h1>Sign in to your account</h1>
+    <p>Don't have an account? <button type="button" (click)="toCreateAccountPage()">Sign up</button></p>
     <div class="input_block">
         <h2>Email</h2>
         <input [(ngModel)]="email"/>
@@ -9,6 +10,6 @@
         <input [(ngModel)]="password"/>
     </div>
     <p *ngIf="showError" id="error">Email or password is incorrect</p>
-    <p *ngIf="showSuccess" id="success">Login successful</p>
+    <p *ngIf="showSuccess" id="success">Login successful. Redirecting...</p>
     <button type="button" id="login" (click)="tryLogin()">Log in</button>
 </div>

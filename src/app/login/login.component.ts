@@ -24,4 +24,8 @@ export class LoginComponent implements OnInit {
     this.showSuccess = success;
   }
 
+  toCreateAccountPage(): void {
+    
+  }
+
 }
