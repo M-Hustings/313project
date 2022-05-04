@@ -1,0 +1,24 @@
+<div class="login_block">
+    <h1>Create an account</h1>
+    <p>Already have an account? <button type="button" (click)="toLoginPage()">Sign in</button></p>
+    <div class="input_block">
+        <h2>First Name</h2>
+        <input [(ngModel)]="firstname"/>
+    </div>
+    <div class="input_block">
+        <h2>Last Name</h2>
+        <input [(ngModel)]="lastname"/>
+    </div>
+    <div class="input_block">
+        <h2>Email</h2>
+        <input [(ngModel)]="email"/>
+    </div>
+    <div class="input_block">
+        <h2>Password</h2>
+        <input [(ngModel)]="password"/>
+    </div>
+    <p *ngIf="showError" id="error">All fields are required</p>
+    <p *ngIf="showSuccess" id="success">Your account has been created. Redirecting...</p>
+    <p *ngIf="showEmailTaken" id="error">Account already exists for that email</p>
+    <button type="button" id="login" (click)="tryCreate()">Create</button>
+</div>
