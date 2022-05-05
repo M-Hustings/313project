@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Account } from '../account';
 import { AccountService } from '../account.service';
 
@@ -8,6 +8,8 @@ import { AccountService } from '../account.service';
   styleUrls: ['./create-account.component.css']
 })
 export class CreateAccountComponent implements OnInit {
+
+  @Output() changePage = new EventEmitter<number>();
 
   firstname: string = '';
   lastname: string = '';
@@ -37,7 +39,7 @@ export class CreateAccountComponent implements OnInit {
   }
 
   toLoginPage(): void {
-    
+    this.changePage.emit(1);
   }
 
 }
