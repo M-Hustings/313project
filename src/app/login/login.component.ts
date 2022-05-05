@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { AccountService } from '../account.service';
 
 @Component({
@@ -7,6 +7,8 @@ import { AccountService } from '../account.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+
+  @Output() changePage = new EventEmitter<number>();
 
   email: string = '';
   password: string = '';
@@ -25,7 +27,7 @@ export class LoginComponent implements OnInit {
   }
 
   toCreateAccountPage(): void {
-    
+    this.changePage.emit(2);
   }
 
 }
