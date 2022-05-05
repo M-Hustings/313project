@@ -1,5 +1,5 @@
 <h1>MP Clothing</h1>
 <div>
-    <app-login *ngIf="pageID==1"></app-login>
-    <app-create-account *ngIf="pageID==2"></app-create-account>
+    <app-login *ngIf="pageID==1" (changePage)="changePage($event)"></app-login>
+    <app-create-account *ngIf="pageID==2" (changePage)="changePage($event)"></app-create-account>
 </div>

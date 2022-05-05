@@ -9,4 +9,8 @@ export class AppComponent {
 
   public pageID: number = 1;
 
+  changePage(page: number): void {
+    this.pageID = page;
+  }
+
 }
